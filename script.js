@@ -6,18 +6,32 @@ let binario = []
 console.log(binario)
 
 
-function divisao(decimal){
+function ToBinario(decimal){
     let binario
     binario = decimal.toString(2)
     return binario
 }
 
+function ToHexa(decimal){
+    let hexa 
+    return hexa = decimal.toString(16)
+}
 
-function adicionar(){
-    let b = divisao(Number(num.value))
+function Binario(){
+    let b = ToBinario(Number(num.value))
 
     let item = document.createElement('option')
     item.text =   `${num.value} em decimal é ${b}` 
+    tab.appendChild(item)
+    num.value = ''
+    num.focus()
+}
+
+function Hexa(){
+    let b = ToHexa(Number(num.value))
+
+    let item = document.createElement('option')
+    item.text =   `${num.value} em Hexadecimal é ${b}` 
     tab.appendChild(item)
     num.value = ''
     num.focus()
